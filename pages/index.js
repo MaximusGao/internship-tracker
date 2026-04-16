@@ -55,6 +55,8 @@ export default function Home() {
   function showToast(msg, d=3000) { setToast(msg); clearTimeout(timer.current); timer.current=setTimeout(()=>setToast(null),d) }
 
   async function scanAccount(email) {
+    const account = accounts.find(a=>a.email===email);
+    if(!account) return;
     setAccounts(prev=>prev.map(a=>a.email===email?{...a,scanning:true}:a))
     try {
       const res = await fetch('/api/scan',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({accessToken:account.accessToken,accountEmail:email})})

@@ -25,3 +25,5 @@
 .badge-rejected{background:var(--red-bg);color:var(--red);}
 .badge-waitlisted{background:var(--purple-bg);color:var(--purple);}
 .dot{width:6px;height:6px;border-radius:50%;display:inline-block;flex-shrink:0;}
+
+[data-theme='dark'] * { color: inherit; }

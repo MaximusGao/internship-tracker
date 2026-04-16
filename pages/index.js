@@ -119,8 +119,8 @@ export default function Home() {
           </div>
 
           <div style={{display:'flex',flexDirection:'column',gap:8}}>
-            {filtered.length===0?(<div style={{textAlign:'center',padding:'64px 24px',border:'1px dashed var(--border)',borderRadius:12}}><div style={{fontSize:32,marginBottom:12}}>📭</div><div style={{fontWeight:500,marginBottom:6}}>No applications yet</div><div style={{color:'var(--text3)',fontSize:13}}>Add a Gmail account and scan</div></div>)
-            :filtered.map(app=>(<div key={app.id} style={{background:'var(--surface)',border:'1px solid var(--border)',borderRadius:10,padding:'14px 16px'}} onMouseEnter={e=>e.currentTarget.style.borderColor='var(--border2)'} onMouseLeave={e=>e.currentTarget.style.borderColor='var(--border)'}>
+            {apps.length===0?(<div style={{textAlign:'center',padding:'64px 24px',border:'1px dashed var(--border)',borderRadius:12}}><div style={{fontSize:32,marginBottom:12}}>📭</div><div style={{fontWeight:500,marginBottom:6}}>No applications yet</div><div style={{color:'var(--text3)',fontSize:13}}>Add a Gmail account and scan</div></div>)
+            :apps.map(app=>(<div key={app.id} style={{background:'var(--surface)',border:'1px solid var(--border)',borderRadius:10,padding:'14px 16px'}} onMouseEnter={e=>e.currentTarget.style.borderColor='var(--border2)'} onMouseLeave={e=>e.currentTarget.style.borderColor='var(--border)'}>
               <div style={{display:'flex',alignItems:'flex-start',justifyContent:'space-between',gap:16}}>
                 <div style={{flex:1}}>
                   <div style={{fontWeight:600,fontSize:14,marginBottom:3}}>{app.company} {app.accountEmail&&<span style={{fontSize:10,color:'var(--text3)',background:'var(--bg2)',border:'1px solid var(--border)',borderRadius:4,padding:'1px 5px',marginLeft:6}}>{app.accountEmail.split('@')[0]}</span>}</div>

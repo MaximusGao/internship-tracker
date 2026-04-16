@@ -1,10 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500&family=Geist:wght@300;400;500;600&display=swap');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@import url('https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500&family=Geist:wght@300;400;500;600&display=swap');
 
 :root {
   --bg:#fafaf9;--bg2:#f5f4f1;--surface:#ffffff;--border:#e8e6e1;--border2:#d4d0c8;
@@ -15,18 +11,16 @@
   --shadow-sm:0 1px 2px rgba(0,0,0,0.04);--shadow:0 2px 8px rgba(0,0,0,0.06);
   --radius:10px;--radius-sm:6px;
 }
-[data-theme="dark"] {
+[data-theme=dark] {
   --bg:#111110;--bg2:#1a1917;--surface:#1c1b19;--border:#2a2825;--border2:#3a3835;
   --text:#f5f4f1;--text2:#a8a49e;--text3:#6b6760;--accent:#3b82f6;--accent-bg:#1e2d4a;
   --green:#4ade80;--green-bg:#052e16;--yellow:#fbbf24;--yellow-bg:#1c1200;
   --orange:#fb923c;--orange-bg:#1c0a00;--red:#f87171;--red-bg:#1c0000;
   --purple:#a78bfa;--purple-bg:#1e1040;
-  --shadow-sm:0 1px 2px rgba(0,0,0,0.3);--shadow:0 2px 8px rgba(0,0,0,0.3);
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-body{background:var(--bg);color:var(--text);font-family:'Geist',-apple-system,sans-serif;font-size:14px;line-height:1.5;-webkit-font-smoothing:antialiased;transition:background 0.2s,color 0.2s;}
-.mono{font-family:'Geist Mono',monospace;}
-.badge{display:inline-flex;align-items:center;gap:5px;font-family:'Geist Mono',monospace;font-size:11px;font-weight:500;padding:3px 8px;border-radius:20px;white-space:nowrap;}
+body{background:var(--bg);color:var(--text);font-family:-apple-system,sans-serif;font-size:14px;line-height:1.5;-webkit-font-smoothing:antialiased;transition:background 0.2s,color 0.2s;}
+.badge{display:inline-flex;align-items:center;gap:5px;font-size:11px;font-weight:500;padding:3px 8px;border-radius:20px;white-space:nowrap;}
 .badge-applied{background:var(--accent-bg);color:var(--accent);}
 .badge-screen{background:var(--yellow-bg);color:var(--yellow);}
 .badge-interview{background:var(--orange-bg);color:var(--orange);}
@@ -34,21 +28,8 @@ body{background:var(--bg);color:var(--text);font-family:'Geist',-apple-system,sa
 .badge-rejected{background:var(--red-bg);color:var(--red);}
 .badge-waitlisted{background:var(--purple-bg);color:var(--purple);}
 .dot{width:6px;height:6px;border-radius:50%;display:inline-block;flex-shrink:0;}
-.card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow-sm);transition:border-color 0.15s,box-shadow 0.15s;}
-.card:hover{border-color:var(--border2);box-shadow:var(--shadow);}
-input,select{background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-sm);color:var(--text);font-family:inherit;font-size:13px;outline:none;transition:border-color 0.15s;}
-input:focus,select:focus{border-color:var(--accent);}
-input::placeholder{color:var(--text3);}
-.btn{display:inline-flex;align-items:center;gap:6px;font-family:inherit;font-size:13px;font-weight:500;border-radius:var(--radius-sm);cursor:pointer;transition:all 0.15s;border:none;}
+.btn{display:inline-flex;align-items:center;gap:6px;font-family:inherit;font-size:13px;font-weight:500;border-radius:6px;cursor:pointer;transition:all 0.15s;border:none;}
 .btn-primary{background:var(--text);color:var(--bg);padding:7px 14px;}
 .btn-primary:hover{opacity:0.85;}
 .btn-secondary{background:transparent;color:var(--text2);border:1px solid var(--border);padding:7px 14px;}
 .btn-secondary:hover{border-color:var(--border2);color:var(--text);background:var(--bg2);}
-.btn-ghost{background:transparent;color:var(--text3);padding:6px 10px;}
-.btn-ghost:hover{color:var(--text);background:var(--bg2);}
-@keyframes fadeUp{from{opacity:0;transform:translateY(6px);}to{opacity:1;transform:translateY(0);}}
-.fade-up{animation:fadeUp 0.25s ease forwards;}
-@keyframes spin{to{transform:rotate(360deg);}}
-.spin{animation:spin 0.7s linear infinite;display:inline-block;}
-::-webkit-scrollbar{width:6px;}
-::-webkit-scrollbar-thumb{background:var(--border2);border-radius:3px;}

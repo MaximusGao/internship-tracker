@@ -57,7 +57,7 @@ export default function Home() {
   async function scanAccount(email) {
     setAccounts(prev=>prev.map(a=>a.email===email?{...a,scanning:true}:a))
     try {
-      const res = await fetch('/api/scan',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({accessToken:acct.accessToken,accountEmail:email})})
+      const res = await fetch('/api/scan',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({accessToken:account.accessToken,accountEmail:email})})
       const {applications=[]} = await res.json()
       setApps(prev => {
         const updated=[...prev]

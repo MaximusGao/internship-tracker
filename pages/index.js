@@ -79,12 +79,12 @@ export default function Home() {
   const stats={total:apps.length,active:apps.filter(a=>['Phone Screen','Interview','Final Round'].includes(a.status)).length,offers:apps.filter(a=>a.status==='Offer Received').length,rate:apps.length?Math.round(apps.filter(a=>a.status!=='Applied').length/apps.length*100):0}
 
   return (<>
-    <Head><title>InternTrack</title></Head>
+    <Head><title> InternTrack</title></Head>
     <div style={{minHeight:'100vh',background:'var(--bg)'}}>
       <div style={{borderBottom:'1px solid var(--border)',background:'var(--surface)',position:'sticky',top:0,zIndex:50}}>
         <div style={{maxWidth:1200,margin:'0 auto',padding:'0 24px',height:52,display:'flex',alignItems:'center',justifyContent:'space-between'}}>
           <div style={{display:'flex',alignItems:'center',gap:10}}>
-            <span style={{fontSize:18}}>🎯</span>
+            
             <span style={{fontWeight:600,fontSize:15}}>InternTrack</span>
           </div>
           <div style={{display:'flex',gap:8,alignItems:'center'}}>
